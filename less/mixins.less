@@ -19,8 +19,12 @@
     color: @c;
     font-size: @fs;
     font-weight: bold;
+    text-align: center;
     cursor: pointer;
     width: 80%;
+    @media @mobile {
+        width: 100%;
+    }
    
     &:hover {
       // The compiled color returned is #006667 

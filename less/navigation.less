@@ -8,22 +8,29 @@
     .nav-container {
         width: 800px;
         .flex-row(space-between, center);
-    }
-    
-    nav {
-        .flex-row(space-between, center);
-     
-        a {
-            color: @shark;
-            font-size: 1.6rem;
-            margin-left: 40px;
 
-            &:hover {
-                color: lighten(@shark, 30%);
-            }
-            
+        @media @mobile {
+            .flex-col(center, center);
         }
-    }
+
+        nav {
+            .flex-row(space-between, center);
+         
+            a {
+                color: @shark;
+                font-size: 1.6rem;
+                margin-left: 40px;
+    
+                @media @mobile {
+                    margin: 10px 30px;
+                }
+    
+                &:hover {
+                    color: lighten(@shark, 30%);
+                }                
+            }
+        }
+    }    
 } 
 
 
