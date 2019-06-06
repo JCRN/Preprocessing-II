@@ -1,1 +1,29 @@
 // Mixins in here
+.flex-row(@j, @a) {
+    display: flex;
+    justify-content: @j;
+    align-items: @a;
+}
+
+.flex-col(@j, @a) {
+    display: flex;
+    flex-direction: column;
+    justify-items: @j;
+    align-content: @a;
+}
+
+.btns(@bc, @c, @fs) {
+    padding: 15px 40px;
+    border-radius: 10px;
+    background-color:@bc;
+    color: @c;
+    font-size: @fs;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80%;
+   
+    &:hover {
+      // The compiled color returned is #006667 
+      background-color: lighten(@bc, 5%)
+    }
+  }
