@@ -1,1 +1,39 @@
 // Navigation Styles here
+.nav-bar {
+    height: 80px;
+    max-width: 100%;
+    border-bottom: 2px dashed @navigation-border; 
+    .flex-row(space-evenly, center); 
+    
+    .nav-container {
+        width: 800px;
+        .flex-row(space-between, center);
+
+        @media @mobile {
+            .flex-col(center, center);
+        }
+
+        nav {
+            .flex-row(space-between, center);
+         
+            a {
+                color: @shark;
+                font-size: 1.6rem;
+                margin-left: 30px;
+    
+                @media @mobile {
+                    margin: 10px 30px;
+                }
+    
+                &:hover {
+                    color: lighten(@shark, 30%);
+                }                
+            }
+        }
+    }    
+} 
+
+
+
+
+    
